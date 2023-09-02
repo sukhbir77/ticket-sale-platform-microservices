@@ -1,22 +1,26 @@
 import request from "supertest";
-import { app } from "../../app";
+import mongoose from "mongoose";
 
+import { app } from "../../app";
 import { Ticket } from "../../models/ticket";
 import { Order } from "../../models/order";
 
 it("returns all the orders associated with the particular user.", async () => {
     // Create Three Tickets
     const ticket1 = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: "Concert",
         price: 13
     })
 
     const ticket2 = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: "Eminem",
         price: 231
     })
 
     const ticket3 = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: "J-Cole",
         price: 421
     })

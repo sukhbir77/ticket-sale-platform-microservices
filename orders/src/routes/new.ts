@@ -8,6 +8,10 @@ import {
     BadRequestError,
 } from '@singtickets/common';
 import { body } from 'express-validator';
+import { OrderCreatedPublisher } from '../events/publishers/order-created-publisher';
+import { natsWrapper } from "../nats-wrapper";
+
+
 import { Ticket } from '../models/ticket';
 import { Order } from '../models/order';
 
@@ -55,6 +59,17 @@ router.post(
         await order.save();
 
         // Publish an event saying that an order was created
+        await new OrderCreatedPublisher(natsWrapper.client).publish({
+            id: order.id,
+            version: order.version,
+            status: OrderStatus.Created,
+            userId: req.currentUser!.id,
+            expiresAt: order.expiresAt.toISOString(),
+            ticket: {
+                id: ticket.id,
+                price: ticket.price,
+            }
+        })
 
         res.status(201).send(order);
     }
