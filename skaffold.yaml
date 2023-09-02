@@ -30,7 +30,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: "**/*.js"
+          - src: "**/*.ts"
             dest: .
     - image: sing9014/orders
       context: orders
@@ -38,5 +38,13 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: "**/*.js"
+          - src: "**/*.ts"
+            dest: .
+    - image: sing9014/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
             dest: .
