@@ -21,7 +21,9 @@ The **Online Ticket Store Microservices** project is a comprehensive solution fo
 
 - **Docker Integration:** Leveraging Docker for containerization, the project ensures consistent and reproducible environments across different stages of development and deployment.
 
-- **Nginx for Load Balancing:** Nginx is employed for load balancing, optimizing resource utilization and providing a seamless experience for users even during high traffic.
+- **Nginx for Load Balancing:** Nginx is employed for load balancing, optimizing resource utilization, and providing a seamless experience for users even during high traffic.
+
+- **NATS Event Bus:** The project utilizes the NATS event bus for efficient communication and event-driven architecture between microservices, enhancing decoupling and scalability.
 
 - **TypeScript and JavaScript:** Utilizing TypeScript for static typing and enhanced developer experience, the project offers a blend of JavaScript for flexibility and familiarity.
 
@@ -51,5 +53,8 @@ To run the project locally, follow these steps:
 
 ```bash
 git clone https://github.com/sukhbir77/TicketSystem.git
+
+Feel free to contribute, report issues, or enhance existing features to make the Online Ticket Store Microservices project even more powerful and user-friendly.
+
 
 
