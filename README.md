@@ -53,6 +53,7 @@ To run the project locally, follow these steps:
 
 ```bash
 git clone https://github.com/sukhbir77/TicketSystem.git
+```
 
 Feel free to contribute, report issues, or enhance existing features to make the Online Ticket Store Microservices project even more powerful and user-friendly.
 
