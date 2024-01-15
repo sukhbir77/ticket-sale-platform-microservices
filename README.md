@@ -29,13 +29,6 @@ The **Online Ticket Store Microservices** project is a comprehensive solution fo
 
 The primary goal of the Online Ticket Store is to provide a flexible, scalable, and maintainable solution for businesses in the entertainment and event industry. Whether you're managing ticket sales for concerts, sports events, or theater productions, this microservices architecture ensures a robust foundation for your online ticketing needs.
 
-### How to Use
-
-Explore each microservice's folder for specific documentation and instructions on running and deploying that particular service. The modular design allows developers to focus on individual components, making it easier to understand, extend, and maintain the system.
-
-Feel free to contribute, report issues, or enhance existing features to make the Online Ticket Store Microservices project even more powerful and user-friendly.
-
-
 ## Technologies Used
 
 - TypeScript
@@ -47,5 +40,16 @@ Feel free to contribute, report issues, or enhance existing features to make the
 - Kubernetes
 - Nginx
 
-## Project Structure
+
+Each microservice is contained in its respective folder, housing its code, Docker files, and configurations.
+
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/sukhbir77/TicketSystem.git
+
 
